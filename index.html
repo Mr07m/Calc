@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc | by Mahi Rathod</title>
+    <style>
+        *{
+            margin: 0;padding: 0;box-sizing: border-box;
+        }
+        #calculator{
+         width: 300px;
+         border: 5px solid black;
+         height: 450px;
+         display: flex;
+         flex-direction: column;
+         margin: 20px auto;
+         border-radius: 10px;
+        }
+        #display{
+            width: 280px;
+            margin: 10px auto;
+            height: 50px;
+            font-size: 30px;
+            outline: none;
+            border-radius: 10px;
+            border: none;
+            background-color: rgb(232, 247, 24);
+            padding: 5px 10px;
+        }
+        button{
+            background-color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button img{
+            transition: all 1s;
+        }
+        button img:hover{
+            transform: scale(1.1,1.1);
+        }
+        #clear{
+            background-color: #fff;
+            margin-left:220px ;
+            margin-bottom: 10px;
+        }
+        .keypad{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        #msd{
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="calculator">
+        <input type="text" id="display">
+        <button onclick="
+        currentDisplay = '';
+        document.querySelector('#display').value=currentDisplay;
+            "><img src="./images/clear.png" height="60px" width="60px" id="clear"></button>
+
+        <div class="keypad">
+            <button onclick="
+            currentDisplay = currentDisplay + '+';
+            document.querySelector('#display').value=currentDisplay;
+                " ><img src="./images/plus.png" height="60px"></button>
+
+            <button onclick="
+            currentDisplay = currentDisplay + '1';
+            document.querySelector('#display').value=currentDisplay;
+                "><img src="./images/1number.png" height="60px"></button>
+
+            <button onclick="
+            currentDisplay = currentDisplay + '2';
+            document.querySelector('#display').value=currentDisplay;
+                "><img src="./images/2-number.png" height="60px"></button>
+
+            <button onclick="
+            currentDisplay = currentDisplay + '3';
+            document.querySelector('#display').value=currentDisplay;
+                "><img src="./images/3-number.png" height="60px"></button>
+
+
+            <button onclick="
+            currentDisplay = currentDisplay + '-';
+            document.querySelector('#display').value=currentDisplay;
+                "><img src="./images/minus.png" height="60px"></button>
+
+            <button onclick="
+            currentDisplay = currentDisplay + '4';
+            document.querySelector('#display').value=currentDisplay;
+                "><img src="./images/4-number.png" height="60px"></button>
+
+            <button onclick="
+            currentDisplay = currentDisplay + '5';
+            document.querySelector('#display').value=currentDisplay;
+                "><img src="./images/5-number.png" height="60px"></button>
+
+            <button onclick="
+            currentDisplay = currentDisplay + '6';
+            document.querySelector('#display').value=currentDisplay;
+                "><img src="./images/6-number.png" height="60px"></button>
+
+            <button onclick="
+            currentDisplay = currentDisplay + '*';
+            document.querySelector('#display').value=currentDisplay;
+                "><img src="./images/multiplication.png" height="60px"></button>
+
+            <button onclick="
+            currentDisplay = currentDisplay + '/';
+            document.querySelector('#display').value=currentDisplay;
+                "><img src="./images/7-number.png" height="50px" id="msd"></button>
+
+            <button onclick="
+            currentDisplay = currentDisplay + '8';
+            document.querySelector('#display').value=currentDisplay;
+                "><img src="./images/8-number.png" height="60px"></button>
+
+            <button onclick="
+            currentDisplay = currentDisplay + '9';
+            document.querySelector('#display').value=currentDisplay;
+                "><img src="./images/9-number.png" height="60px"></button>
+
+            <button onclick="
+            currentDisplay = currentDisplay + '/';
+            document.querySelector('#display').value=currentDisplay;
+                "><img src="./images/divider.png" height="60px"></button>
+
+            <button onclick="
+            currentDisplay = currentDisplay + '.';
+            document.querySelector('#display').value=currentDisplay;
+                "><img src="./images/dot.png" height="60px"></button>
+
+            <button onclick="
+            currentDisplay = currentDisplay + '0';
+            document.querySelector('#display').value=currentDisplay;
+                "><img src="./images/0-number.png" height="60px"></button>
+
+            <button onclick="
+            currentDisplay = eval(currentDisplay) ;
+            document.querySelector('#display').value=currentDisplay;
+                "><img src="./images/equal.png" height="60px"></button>
+        </div>
+    </div>
+
+    <script>
+        let currentDisplay = '';
+        document.querySelector('#display').value=currentDisplay;
+
+    </script>
+</body>
+</html>
